@@ -9,7 +9,7 @@ const Cards = () => {
 
 
     useEffect(() => {
-        fetch('recipes.json')
+        fetch('fakeData.json')
             .then(res => res.json())
             .then(data => setCards(data))
     }, []);
