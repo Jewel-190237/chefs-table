@@ -2,7 +2,7 @@
 import time from '../../../../assets/image/time.png';
 import calorie from '../../../../assets/image/calories.png';
 import PropTypes from 'prop-types';
-const Card = ({ card }) => {
+const Card = ({ card, wantToCookHandler }) => {
   const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = card;
   return (
 
@@ -38,7 +38,7 @@ const Card = ({ card }) => {
           </div>
 
           <div className="card-actions">
-            <button className="bg-[#0BE58A] px-5 py-3 rounded-3xl my-5 text-black font-semibold">Want to Cook</button>
+            <button onClick={() => wantToCookHandler(card)} className="bg-[#0BE58A] px-5 py-3 rounded-3xl my-5 text-black font-semibold">Want to Cook</button>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@ const Card = ({ card }) => {
 };
 Card.propTypes = {
   card: PropTypes.array,
-
+  wantToCookHandler: PropTypes.func
 
 }
 
