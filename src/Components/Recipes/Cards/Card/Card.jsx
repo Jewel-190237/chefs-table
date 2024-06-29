@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 const Card = ({ card, wantToCookHandler }) => {
   const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = card;
   return (
-
-    <div className='card w-96 bg-base-100 shadow-xl px-10 py-10 pt-10 space-y-5'>
+    <div className='card bg-base-100 shadow-xl px-10 py-10 pt-10 space-y-5'>
       <div className="">
         <figure className="">
           <img src={recipe_image} alt="Shoes" className="rounded-xl" />
@@ -17,7 +16,6 @@ const Card = ({ card, wantToCookHandler }) => {
           <div className='border-b-2'><h1 className="text-xl  font-semibold">Ingredients:{ingredients.length}</h1>
             {ingredients.map((ingredient, idx) => (
               <span key={idx}>
-
                 <a href="">
                   <ul className="list-disc ml-6 text-[#878787] ">
                     <li>{ingredient}</li>
@@ -28,11 +26,11 @@ const Card = ({ card, wantToCookHandler }) => {
           </div>
           <div className='flex gap-10 '>
             <div className='flex gap-3 mt-5'>
-              <img src={time} alt="" />
+              <img className='w-1/6' src={time} alt="" />
               <p>{preparing_time}<span> minutes</span></p>
             </div>
             <div className='flex gap-3 mt-5'>
-              <img src={calorie} alt="" />
+              <img className='w-1/6' src={calorie} alt="" />
               <p>{calories}<span> calories</span></p>
             </div>
           </div>

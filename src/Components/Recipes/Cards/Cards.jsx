@@ -34,7 +34,7 @@ const Cards = () => {
 
     return (
         <div className="flex flex-col md:flex-row">
-            <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2">
+            <div className=" md:w-2/3 grid grid-cols-1 md:grid-cols-2">
                 {cards.map(card => (
                     <Card
                         key={card.id}

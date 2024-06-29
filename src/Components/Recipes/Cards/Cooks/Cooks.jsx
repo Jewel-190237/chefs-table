@@ -21,7 +21,7 @@ const Cooks = ({ cooks, setCooks }) => {
     };
 
     return (
-        <div className="overflow-x-auto border border-separate rounded-3xl my-7">
+        <div className="border border-separate rounded-3xl my-7">
             <div className="p-10">
                 {/* Want to cook */}
                 <h1 className="text-2xl font-semibold text-center my-8 border-b-2">Want to cook: {cooks.length}</h1>
